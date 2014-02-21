@@ -1,0 +1,35 @@
+[github]
+    user = hiisi13
+
+[user]
+    name = Dmitry Kozhedubov
+    email = dmitry-kozhedubov@yandex.ru
+
+[core]
+    editor = /usr/bin/vim
+
+[color]
+    ui = true
+
+[alias]
+    ci = commit
+    ca = commit --amend
+    co = checkout
+    df = diff
+    st = status
+    acm = "!git add . && git commit -m"
+
+    rh = reset --hard origin/master
+    rhb = !sh -c 'git reset --hard origin/$1' -
+    forh = "!git fetch origin && git rh"
+    form = "!git fetch origin && git rebase origin/master"
+    forb = !sh -c 'git fetch origin && git rebase origin/$1' -
+
+    rim = rebase -i origin/master
+    rib = !sh -c 'git rebase -i origin/$1' -
+
+    ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+    ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+    ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+
+    ch = clean -f -d
