@@ -37,5 +37,10 @@
     ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
     ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
     ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+    cl = !sh -c 'git log --pretty=format:\"%C(yellow)%h %Creset%s\" --decorate $1..$2' -
 
     ch = clean -f -d
+
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
