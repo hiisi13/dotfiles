@@ -18,6 +18,7 @@
     df = diff
     st = status
     acm = "!git add . && git commit -m"
+    wip = "!git add . && git commit -m \"WIP\""
 
     rh = reset --hard origin/master
     rhb = !sh -c 'git reset --hard origin/$1' -
